@@ -10,7 +10,7 @@ class History extends Controller
     public function index()
     {
         return view('history', [
-            'histories' => Result::sortBy('created_at', 'ASC')->all()
+            'histories' => Result::orderBy('created_at', 'DESC')->get()
         ]);
     }
 }
