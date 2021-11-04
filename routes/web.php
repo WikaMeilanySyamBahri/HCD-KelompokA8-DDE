@@ -14,10 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/artisan/storage', function() {
+    $command = 'storage:link';
+    $result = Artisan::call($command);
+    return Artisan::output();
 });
-Route::get('/result/{id?}', 'App\Http\Controllers\result@index')->name('result');
-Route::get('/history', 'App\Http\Controllers\history@index')->name('history');
+Route::get('/result/{id?}', 'App\Http\Controllers\Result@index')->name('result');
+Route::get('/', 'App\Http\Controllers\History@index')->name('history');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
