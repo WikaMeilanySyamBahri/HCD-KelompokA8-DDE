@@ -7,9 +7,10 @@ use Illuminate\Http\Request;
 
 class History extends Controller
 {
-    public function index(){
-        return view('history',[
-            'histories' => Result::all()
+    public function index()
+    {
+        return view('history', [
+            'histories' => Result::sortBy('created_at', 'ASC')->all()
         ]);
     }
 }
