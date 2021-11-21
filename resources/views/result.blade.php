@@ -37,7 +37,7 @@
             <div class="flex justify-center pt-8 sm:justify-start sm:pt-0 "
                 style="border-left:10px solid #F09600!important">
                 <span class="h1 bold ms-4">DDE</span>
-                <a href="https://app-dde.herokuapp.com/history" class="btn btn-primary float-end me-4">History</a>
+                <a href="https://app-dde.herokuapp.com" class="btn btn-primary float-end me-4">History</a>
             </div>
 
             <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg px-4">
